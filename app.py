@@ -51,14 +51,14 @@ btn = st.button("Predict Salary")
 if btn:
     util.load_saved_artifacts()
     x = util.get_salary(age,hours_per_week,education,occupation,sex)
-    # if x == '1':
+    if x == '1':
     #     salary = " >50K"
           st.header("Salary is greater than 50K")
     #     mycursor.execute("INSERT INTO inputs VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", (
     #     age, workclass, fnlwgt, education, education_number, marital_status, occupation, relationship, race, sex,
     #     c_gain, c_loss, hours_per_week, country, salary))
     #     mydb.commit()
-    # else:
+    else:
     #     salary = " <=50K"
           st.header("Salary is less than 50K")
     #     mycursor.execute("INSERT INTO inputs VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", (
