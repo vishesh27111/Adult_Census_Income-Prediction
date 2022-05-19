@@ -21,13 +21,15 @@ btn = st.button("Predict Salary")
 
 
 if btn:
-    util.load_saved_artifacts()
-    x = util.get_salary(age,hours_per_week,education,occupation,sex)
-    if x == '1':
-          st.header("Salary is greater than 50K")
-
+    if age==0:
+        st.header("Error : Enter age")
     else:
-          st.header("Salary is less than 50K")
+        util.load_saved_artifacts()
+        x = util.get_salary(age,hours_per_week,education,occupation,sex)
+        if x == '1':
+            st.header("Salary is greater than 50K")
+        else:
+            st.header("Salary is less than 50K")
 
 
 
